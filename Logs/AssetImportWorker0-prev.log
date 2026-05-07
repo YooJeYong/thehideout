@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.5f1 (cc83ebd631f8) revision 13403115'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-luxem" at "2026-05-06T22:03:32.6080536Z"
 OS: 'Windows 11  (10.0.26200) Core' Language: 'ko' Physical Memory: 16216 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-luxem" at "2026-05-06T07:51:50.7168061Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-05-06T07:51:50Z
+Date: 2026-05-06T22:03:32Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.5f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ E:/Unity/hidenet
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61820
+63259
 -licensingIpc
 LicenseClient-luxem
 -force-d3d12
@@ -68,12 +68,12 @@ E:/Unity/hidenet
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [17076]  Target information:
+Player connection [17200]  Target information:
 
-Player connection [17076]  * "[IP] 211.199.214.254 [Port] 0 [Flags] 2 [Guid] 1771286593 [EditorId] 1771286593 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HPPBPLL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [17200]  * "[IP] 211.199.214.254 [Port] 0 [Flags] 2 [Guid] 305836821 [EditorId] 305836821 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HPPBPLL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [17076] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [17076] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17200] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [17200] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,7 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 17.29 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 13.22 ms, found 13 plugins.
 Initialize engine version: 6000.4.5f1 (cc83ebd631f8)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/Unity/hidenet/Assets
@@ -103,12 +103,12 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56040
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002092 seconds.
+Registered in 0.001330 seconds.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -116,44 +116,46 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.463 seconds
-Domain Reload Profiling: 1001ms
-	BeginReloadAssembly (157ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (81ms)
-	LoadAllAssembliesAndSetupDomain (242ms)
-		LoadAssemblies (153ms)
-		AnalyzeDomain (231ms)
-			TypeCache.Refresh (229ms)
-				TypeCache.ScanAssembly (213ms)
-	FinalizeReload (465ms)
+- Finished resetting the current domain, in  0.400 seconds
+Domain Reload Profiling: 838ms
+	BeginReloadAssembly (132ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (196ms)
+		LoadAssemblies (128ms)
+		AnalyzeDomain (188ms)
+			TypeCache.Refresh (187ms)
+				TypeCache.ScanAssembly (174ms)
+	FinalizeReload (401ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (52ms)
-			BeforeProcessingInitializeOnLoad (93ms)
-			ProcessInitializeOnLoadAttributes (135ms)
-			ProcessInitializeOnLoadMethodAttributes (97ms)
+			InitializePlatformSupportModulesInManaged (44ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (120ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-luxem"
 [Licensing::IpcConnector] LicenseClient-luxem channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-luxem-6000.4.5" at "2026-05-06T07:51:53.0802796Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 2552, path: "C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-luxem-6000.4.5" at "2026-05-06T22:03:34.6679089Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 1520, path: "C:/Program Files/Unity/Hub/Editor/6000.4.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              9578f1b0f28145fda08ebe651520bc35
-  Correlation Id:          ca44c608a6e5d45b7fffcb6c48371211
-  External correlation Id: 7559597960665677560
+  Session Id:              ea31c47a8d8b482c85116617f8c23175
+  Correlation Id:          8865da8bdd1514b42948aa6107f354d0
+  External correlation Id: 3332227427027501235
   Machine Id:              5CfMcHl6FNwj+0EmF/QZxZZn4A0=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-luxem-6000.4.5" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-luxem-6000.4.5-notifications" at "2026-05-06T07:51:53.0930737Z"
-[Licensing::Module] Licensing Background thread has ended after 2.38s
-Begin MonoManager ReloadAssembly
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-luxem-6000.4.5-notifications" at "2026-05-06T22:03:34.6818247Z"
+[Licensing::Module] Licensing Background thread has ended after 2.07s
+[Licensing::Module] Licensing is initialized (took 0.18s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 14568932248349-UnityPersXXXX
@@ -231,12 +233,12 @@ Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies
 Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll not valid. Loading of assembly skipped.
-Refreshing native plugins compatible for Editor in 6.19 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 4.51 ms, found 13 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 5.62 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 4.93 ms, found 13 plugins.
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
@@ -248,27 +250,27 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.648 seconds
-Domain Reload Profiling: 2571ms
-	BeginReloadAssembly (199ms)
+- Finished resetting the current domain, in  1.338 seconds
+Domain Reload Profiling: 2304ms
+	BeginReloadAssembly (338ms)
 		DisableScriptedObjects (5ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (40ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (74ms)
-	LoadAllAssembliesAndSetupDomain (597ms)
-		LoadAssemblies (410ms)
-		AnalyzeDomain (304ms)
-			TypeCache.Refresh (220ms)
-				TypeCache.ScanAssembly (202ms)
-			BuildScriptInfoCaches (71ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1648ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (521ms)
+		LoadAssemblies (305ms)
+		AnalyzeDomain (303ms)
+			TypeCache.Refresh (212ms)
+				TypeCache.ScanAssembly (196ms)
+			BuildScriptInfoCaches (76ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1338ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (171ms)
-			ProcessInitializeOnLoadAttributes (945ms)
-			ProcessInitializeOnLoadMethodAttributes (173ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			BeforeProcessingInitializeOnLoad (144ms)
+			ProcessInitializeOnLoadAttributes (803ms)
+			ProcessInitializeOnLoadMethodAttributes (174ms)
+			AfterProcessingInitializeOnLoad (4ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
@@ -289,70 +291,120 @@ WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 5.47 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 5.54 ms, found 13 plugins.
 Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7345 unused Assets / (9.8 MB). Loaded Objects now: 8277.
-Memory consumption went from 170.7 MB to 160.8 MB.
-Total: 20.770300 ms (FindLiveObjects: 1.487500 ms CreateObjectMapping: 0.712600 ms MarkObjects: 13.790700 ms  DeleteObjects: 4.777100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 3267.227352 seconds.
-  path: Assets/Scripts/Rendering/MatrixRenderPass.cs
-  importAddress: Guid(99752186d43793b40808c7be79e5f044) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scripts/Rendering/MatrixRenderPass.cs using Guid(99752186d43793b40808c7be79e5f044) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '66c0a57d56cb2a8fa1182425bf650c0d') in 0.0976494 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8aaf13be34d69b8d553030fc0569fb4a DependenciesID=c371a368c9766dca0e82610af125e5c0 StaticDependenciesID=0a548c3e23ff316511f3152f366283b3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 2486.790517 seconds.
-  path: Assets/hidenet.shadergraph
-  importAddress: Guid(885476ec18292274db7acbfd81e62dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/hidenet.shadergraph using Guid(885476ec18292274db7acbfd81e62dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6f7bf25a33575ba3774df889f4948feb') in 1.240391 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a895767c26dacc84f7187963ad6617a9 DependenciesID=4addf84357542ff939be997e4ae4f5ab StaticDependenciesID=695e98944f1e75e6d5a20efdb1fa0116 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.510061 seconds.
-  path: Assets/Scripts
-  importAddress: Guid(d9ed3d4afe3893f458b6912d9e4da831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(d9ed3d4afe3893f458b6912d9e4da831) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '510351f15b4bd08130d54558bf9610df') in 0.0014425 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d2a87e12d564be6c2b94f62e803f3461 DependenciesID=2f73915faaadd851922a51b6aa97ef76 StaticDependenciesID=17246bb4053a0306c2848892a150261f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.476632 seconds.
-  path: Assets/Scenes
-  importAddress: Guid(0cc1b79de78bc4991892d4d342d7211a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(0cc1b79de78bc4991892d4d342d7211a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '14d82a6bf0cfa1b9c083c6c23938aecb') in 0.0005989 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5a572627d97213fc1519ae442db98615 DependenciesID=39b2e7533803880efc2c8ad373d5e6c8 StaticDependenciesID=6cb42b86b6c4ac7a5f96512e41e20100 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 53.376292 seconds.
-  path: Assets/Scenes/hidenet.scenetemplate
-  importAddress: Guid(d89642bf8f9ac334d81f8c843aa1598e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/hidenet.scenetemplate using Guid(d89642bf8f9ac334d81f8c843aa1598e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6159571c541c3e451a4ef1cccb0b2ee9') in 0.6769971 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=49692b7f73824b2d44ead9a51895727f DependenciesID=9bfba9444bf264e02ecefa32980309cd StaticDependenciesID=0d52f570c0f10aa55f40184be03d8981 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4539
-
-========================================================================
-Received Import Request.
-  Time since last request: 220.962080 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  importAddress: Guid(55daccc09a3b69647bbab145b54a3ab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(55daccc09a3b69647bbab145b54a3ab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '03457bdce33e99ec0d6dc28a5a45ac12') in 0.0006893 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b880a7123679108485fffbb5e881839e DependenciesID=a9f7f320bd9753691308a4d59b14ab1a StaticDependenciesID=7b59338c8a95e364a1fe48f244515538 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.238070 seconds.
-  path: Assets/Scenes/BasicScene.unity
-  importAddress: Guid(4e9fef26e6adb88479ad1b9834a32d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/BasicScene.unity using Guid(4e9fef26e6adb88479ad1b9834a32d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '7a64df8ed407e547c1fc0130e803516a') in 0.0006629 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=02766cc840a6dedd9fa75abf028ae6bf DependenciesID=c5c4f9a52bee5dc49a3c36eecf095fb5 StaticDependenciesID=ef72401c76180dd9aadb3802b43b7c72 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+Unloading 7345 unused Assets / (10.9 MB). Loaded Objects now: 8278.
+Memory consumption went from 171.1 MB to 160.2 MB.
+Total: 20.216200 ms (FindLiveObjects: 0.730700 ms CreateObjectMapping: 0.570300 ms MarkObjects: 13.578600 ms  DeleteObjects: 5.332300 ms)
 
 ========================================================================
 Received Prepare
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Tutorials.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Tutorials.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Tutorials.Core.Tests.dll at Library/ScriptAssemblies/Unity.Tutorials.Core.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.AndroidOpenXR.Tests.dll at Library/ScriptAssemblies/Unity.XR.AndroidOpenXR.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.AndroidXROpenXR.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.AndroidXROpenXR.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.AndroidXROpenXR.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.AndroidXROpenXR.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.ARFoundation.CodeSamples.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.CodeSamples.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.ARFoundation.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.ARFoundation.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.ARFoundation.InternalUtils.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.InternalUtils.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.ARFoundation.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.ARSubsystems.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.CompositionLayers.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.CompositionLayers.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.CompositionLayers.Tests.dll at Library/ScriptAssemblies/Unity.XR.CompositionLayers.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.CoreUtils.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.CoreUtils.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.CoreUtils.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.CoreUtils.Tests.dll at Library/ScriptAssemblies/Unity.XR.CoreUtils.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Hands.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.Hands.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Hands.Tests.dll at Library/ScriptAssemblies/Unity.XR.Hands.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Interaction.Toolkit.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Interaction.Toolkit.Tests.dll at Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Management.EditorTests.dll at Library/ScriptAssemblies/Unity.XR.Management.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Management.TestPackage.dll at Library/ScriptAssemblies/Unity.XR.Management.TestPackage.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Management.TestPackage.Editor.dll at Library/ScriptAssemblies/Unity.XR.Management.TestPackage.Editor.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Management.Tests.dll at Library/ScriptAssemblies/Unity.XR.Management.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Management.Tests.Standalone.dll at Library/ScriptAssemblies/Unity.XR.Management.Tests.Standalone.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.MetaOpenXR.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.MetaOpenXR.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.MetaOpenXR.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.MetaOpenXR.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.MetaOpenXR.Tests.dll at Library/ScriptAssemblies/Unity.XR.MetaOpenXR.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.OpenXR.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.OpenXR.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.OpenXR.Tests.dll at Library/ScriptAssemblies/Unity.XR.OpenXR.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.OpenXR.Ubuntu.Tests.dll at Library/ScriptAssemblies/Unity.XR.OpenXR.Ubuntu.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Simulation.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.Simulation.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.Simulation.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.XR.Simulation.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.TestSupport.dll at Library/ScriptAssemblies/Unity.XR.TestSupport.dll not valid. Loading of assembly skipped.
+Assembly Unity.XR.TestTooling.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.TestTooling.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll not valid. Loading of assembly skipped.
+Refreshing native plugins compatible for Editor in 6.71 ms, found 13 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.343 seconds
+Domain Reload Profiling: 2113ms
+	BeginReloadAssembly (226ms)
+		DisableScriptedObjects (5ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (445ms)
+		LoadAssemblies (305ms)
+		AnalyzeDomain (225ms)
+			TypeCache.Refresh (9ms)
+			BuildScriptInfoCaches (202ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1343ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (143ms)
+			ProcessInitializeOnLoadAttributes (813ms)
+			ProcessInitializeOnLoadMethodAttributes (156ms)
+			AfterProcessingInitializeOnLoad (5ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -371,298 +423,17 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 7.70 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 4.91 ms, found 13 plugins.
 Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7303 unused Assets / (7.2 MB). Loaded Objects now: 8411.
-Memory consumption went from 174.7 MB to 167.5 MB.
-Total: 110.033400 ms (FindLiveObjects: 2.495200 ms CreateObjectMapping: 0.906700 ms MarkObjects: 102.625500 ms  DeleteObjects: 4.003900 ms)
+Unloading 7480 unused Assets / (7.3 MB). Loaded Objects now: 8293.
+Memory consumption went from 212.4 MB to 205.2 MB.
+Total: 15.246300 ms (FindLiveObjects: 0.580400 ms CreateObjectMapping: 0.510300 ms MarkObjects: 11.287100 ms  DeleteObjects: 2.867200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 1974.268555 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Thumb Expression Capture.asset
-  importAddress: Guid(9d8c9c84da35a7c4c89efd57343c1df8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Thumb Expression Capture.asset using Guid(9d8c9c84da35a7c4c89efd57343c1df8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c3496ffdd354e0fbbbb2aada9ce92d38') in 0.2659523 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be1d9b1725503d358afce3ced3647c93 DependenciesID=40d1a5fdae77ebe81511e59ca2c4b042 StaticDependenciesID=aa048dbf453d8613a2336c7058d44c69 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures
-  importAddress: Guid(6e328aec6ff17084fb147d5b790becee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures using Guid(6e328aec6ff17084fb147d5b790becee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '18c9a677395927683a87a6f65bf3dab2') in 0.003657 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=570c3d163f73ce21f7426b5eda257ab8 DependenciesID=af60e5b7df7695310a39a8638e465953 StaticDependenciesID=9553004ae37baf202445c2dafbe553fa 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/HMDOverlay.png
-  importAddress: Guid(fb2db2f40ceaf458085c82fc17cfe800) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/HMDOverlay.png using Guid(fb2db2f40ceaf458085c82fc17cfe800) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0757e21ae5c61d82814055e2851e333c') in 0.1250161 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0fbdc34be1a68e71bcf02c52e03479b2 DependenciesID=39c0a1e963039bf6cf880c4f83d67d30 StaticDependenciesID=b4fd15f485bd319b8463e593c94d5fe3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Thumb.png
-  importAddress: Guid(3b2e62babc5249f42921c2cd027852cd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Thumb.png using Guid(3b2e62babc5249f42921c2cd027852cd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7a1d15412df92c1c5784d5de0e9da061') in 0.0088652 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4373a16cc70c24b981219891d04b0188 DependenciesID=0741fb04b168463c6621b98287a5994f StaticDependenciesID=f047f1bb8d8723a54cea76ab28d99dd8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/xr_hmd.png
-  importAddress: Guid(08548d5ac6b7bc64da0b332636c5cc91) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/xr_hmd.png using Guid(08548d5ac6b7bc64da0b332636c5cc91) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bb5cb0d5847ab6316044b690e67ff7d3') in 0.0124895 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a9de0d33e25a50a16f1793c25fdfa8f DependenciesID=9fb93797deb1cde3d9647870a8134597 StaticDependenciesID=17abf48163b393630b6cb52e896c9dd0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Mouse/Mouse.png
-  importAddress: Guid(f997d60d79a4e45cab6b1814e377a1b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Mouse/Mouse.png using Guid(f997d60d79a4e45cab6b1814e377a1b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '01727b1e944b96351f750cf6e8fc22e8') in 0.0079023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=573809dd68a9096954ee19d17cd18859 DependenciesID=756700b5d458c52659eb1a0b7e51456f StaticDependenciesID=9fa7c46fec2996e1c76ecf6e8d260fcc 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Poke Expression Capture.asset
-  importAddress: Guid(95c319715e9d2644da8ae09af8ccfee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Poke Expression Capture.asset using Guid(95c319715e9d2644da8ae09af8ccfee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '170757835f81c62a9ef7ff0b0709989d') in 0.0051257 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9980001630d3b61abc140d147849020c DependenciesID=a96b2f535c5385ecafe02f6c795aa256 StaticDependenciesID=aa5b7fb6ae25810f67292e2c46ffc18a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Scripts
-  importAddress: Guid(000d1a33d8d2f8445bb24d7d483fc34d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Scripts using Guid(000d1a33d8d2f8445bb24d7d483fc34d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd3ff7ac7abccaf95d4d54cc59f90db2c') in 0.0031424 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=96eaf2ac9650b8ebee8ddc29fdf3cde7 DependenciesID=8966d4cb0569289dec05c64d404489e2 StaticDependenciesID=11a389f3b85d9e145b2966c5c7b6ff59 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/HMD.png
-  importAddress: Guid(4eb43321e418951499417cda6141b31a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/HMD.png using Guid(4eb43321e418951499417cda6141b31a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd7458c45f25d8073372cea147ade9391') in 0.0113291 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6e735bd33bea2a5e041c51b99f98fb0 DependenciesID=3bdfc94b06fafad70fe2933ad7f8c4a6 StaticDependenciesID=7b67777f19cbb7734c95b71c06d839ee 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/CloseWindow.png
-  importAddress: Guid(c76518a5819794083a346812c0906b77) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/CloseWindow.png using Guid(c76518a5819794083a346812c0906b77) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8b37f0b778faf9a63459ca6d6a49a5bf') in 0.0088841 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5864dc4dc5448d91318b46818162b17 DependenciesID=0bbb10a8c25cd2743c1ddb50a35b5b63 StaticDependenciesID=e21f2fe4c3f7318db14b93b717aa7796 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/ControllerOverlayLinesRight.png
-  importAddress: Guid(310ef0f38fe364cc986d05acdbdf1183) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/ControllerOverlayLinesRight.png using Guid(310ef0f38fe364cc986d05acdbdf1183) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f4ecc1f26d6e962942d62470c79b5ee0') in 0.0086877 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=88086f2ffbb3d047e81c7a2e5c2091f3 DependenciesID=2c23c8159c519e38a1f258b9cd3dad17 StaticDependenciesID=6f7420e0cf1d3df7e95ea0e167b1cc65 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands
-  importAddress: Guid(83f134399f6a4734c9c82f339cbf170a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands using Guid(83f134399f6a4734c9c82f339cbf170a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1a5035f73510c66720211a686ecf5274') in 0.0029274 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bb318d1d6922aa2b53908ecc613c7caa DependenciesID=f97a42d0a944aff43bff50175c3be20d StaticDependenciesID=0dc83ef46575c18776dfb7411b49cfb0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Default.png
-  importAddress: Guid(7d3dbc333af046c4193982e1166659dd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Default.png using Guid(7d3dbc333af046c4193982e1166659dd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dd0dc42c036f7da8249f06bb7c828a8e') in 0.0089457 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ff42357f9994aa4ea26a8a2fd8eb8bf DependenciesID=b5e110029cfbf7c3710c0cd0550eece9 StaticDependenciesID=c883cc7d8855493de20297f87c108632 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Pinch.png
-  importAddress: Guid(a6721511441c05a43964dac58584c890) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Pinch.png using Guid(a6721511441c05a43964dac58584c890) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2257196c0fbb7c10e0a6ca0ade62e316') in 0.0087681 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=005963f320e0775d55d79a7172b4e747 DependenciesID=ed5d8ac02383a1ab8de5dfe604605a50 StaticDependenciesID=a8482c8e20319429efdeccb13cb28147 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000062 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/HMD_d.png
-  importAddress: Guid(177f60e6b21ff774093004ca330b2241) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/HMD_d.png using Guid(177f60e6b21ff774093004ca330b2241) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e517b639242deb83226e8e8312ab0d89') in 0.0107803 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=07705d03ebd8b8a5ac44455d646568f1 DependenciesID=0e89414ae508cbfaffce83bb301988ca StaticDependenciesID=054979fdb644e5ac908d6c0989e140b4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Open Expression Capture.asset
-  importAddress: Guid(05293ab353dc8a747a36ed129311686d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Open Expression Capture.asset using Guid(05293ab353dc8a747a36ed129311686d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b13c9ac98b5b2c27e4585d7ab557c0d2') in 0.0054982 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1bf91b663c97bb3ee36dd616ddd786f7 DependenciesID=5db6935ff586d70570c2654eef368eef StaticDependenciesID=9d98dc4b72e924e315c90e3920a25b55 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Open.png
-  importAddress: Guid(ceccab26080354140af21950c6d338d5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Open.png using Guid(ceccab26080354140af21950c6d338d5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e07a495aca21bf90a7b9ea9aea6e92b7') in 0.0127917 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5e12216b8b9febf2657c98e1d275fe45 DependenciesID=a6acdf751ed178297bdf8dfc4688098a StaticDependenciesID=0512a2fc2057a0aa714c78a7210e886b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Grab.png
-  importAddress: Guid(bd6b9153aa3b96f49b238bbf6ae68b80) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Grab.png using Guid(bd6b9153aa3b96f49b238bbf6ae68b80) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2cb92ddbddd32ef320689087fa94ce24') in 0.0148847 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=37d1af0bc6dbb4e4154aee8d3dfbf331 DependenciesID=aa3be8a58f247673c98b06db6944a63f StaticDependenciesID=f735f0436b6e5b02db090d88c0066c15 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs
-  importAddress: Guid(a907ece591e731e49b5d7be45f089972) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs using Guid(a907ece591e731e49b5d7be45f089972) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '374850b5498da3b226575d9967ad2bde') in 0.004337 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b75caa321fc755f34327e1d063a3215 DependenciesID=83d72ba601ef6c35d967133912c3e062 StaticDependenciesID=0ecdf6560f32fdcca71ffea204d69b78 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/Unlocked.png
-  importAddress: Guid(f01f3bb228b3b4251a04e2036212d115) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/Unlocked.png using Guid(f01f3bb228b3b4251a04e2036212d115) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '88064afaaa428ebd42da2b008c2a8ae1') in 0.0087274 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c1ddca704b9e30afb4e5b85c063bc02c DependenciesID=4ca611a85ec613b81592c0864c8f7d4f StaticDependenciesID=e11d74dfa7c6911680bdcad372a7839a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Grab Expression Capture.asset
-  importAddress: Guid(3861c298d39c60c44b16920421444875) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Grab Expression Capture.asset using Guid(3861c298d39c60c44b16920421444875) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '804ef4158605587a98dfbdbec57464a1') in 0.0046023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=76382fcf344eb46589cd8fff3a9dcb0a DependenciesID=9b41bad748d8fbb5a4c6df1f336dcc64 StaticDependenciesID=5790e40ee6402389bd05644e92d7ce77 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/XR Device Simulator UI.prefab
-  importAddress: Guid(ead42e0472b7547fbba6c229aeaf37d3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/XR Device Simulator UI.prefab using Guid(ead42e0472b7547fbba6c229aeaf37d3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0ce68a5693f110cab5e945f809ddd47b') in 0.0959023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b8758a20ecd486db820db50f03933a24 DependenciesID=fe3f4bb19379bda6483f77f59715dc27 StaticDependenciesID=a1fa56da426a70046b96e92fd3ddafff 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 756
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/XR.png
-  importAddress: Guid(0265e2b6afccd49de9c1f0b3a1fb4285) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head/XR.png using Guid(0265e2b6afccd49de9c1f0b3a1fb4285) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '16fe19bb704c0b09197261ce13dd1bbb') in 0.0088759 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bbc7c7906c4eedaa8cb4cdb0d94c92ce DependenciesID=d85fdb5b665fe263665c7148eb3c7bae StaticDependenciesID=1d015d69d4a273de9630189a4a4bb291 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/DeviceSimUI_bg.png
-  importAddress: Guid(d7348fb3f11ba4f6f933462328963785) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/DeviceSimUI_bg.png using Guid(d7348fb3f11ba4f6f933462328963785) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1072cfc052985de2d36480a7f6736fe5') in 0.0130061 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=09302ed1e5b82d425c26ffa75f3c51c1 DependenciesID=7f10f78a3b67ce6b45f703c4d092e94f StaticDependenciesID=1c670ccee895e9c47ad41ad20aef69ae 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Mouse/Cursor.png
-  importAddress: Guid(9e4e923f2e0534a56b6a0c2321388194) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Mouse/Cursor.png using Guid(9e4e923f2e0534a56b6a0c2321388194) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2175ea44f172e5018b775c92c83d39d4') in 0.0071318 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d31faa74fd4858ab6b984a5f2f3ee937 DependenciesID=dc86ef2491939434aa65a3e6cbfe509b StaticDependenciesID=2ade8d19165d52dfbad31081cc0ebd89 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/ControllerOverlayLinesLeft.png
-  importAddress: Guid(cd4fe4c19a40743a6896069a50a394ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/ControllerOverlayLinesLeft.png using Guid(cd4fe4c19a40743a6896069a50a394ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'af6439b1e36accaf256e123cd7ae585d') in 0.0093599 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=acd27a93ec5f1f9b50883b2c79d365be DependenciesID=96ef554f9bbe3be067b5d9f57fde3a60 StaticDependenciesID=7e3d47553da736f8a982f7273e87780b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/DeviceSimulator.asmdef
-  importAddress: Guid(a0c6cb4ff4b70b44e933543a342fb2b1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/DeviceSimulator.asmdef using Guid(a0c6cb4ff4b70b44e933543a342fb2b1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9930a2b49f512a39d462beabbe4f9311') in 0.0041309 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28e7e6ab0ccc1013b7e5ee2e88d113c0 DependenciesID=c260565afb1ee8a4400635a3e60f9355 StaticDependenciesID=7737a0484cb0dea9de4127d906739f6a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Mouse/MouseMoveAround.png
-  importAddress: Guid(013811fdd48c040339e9adc40e692381) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Mouse/MouseMoveAround.png using Guid(013811fdd48c040339e9adc40e692381) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2d8c2c1139c812b192539270f565b9fb') in 0.0087313 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bf7c96068e7a03af1f13418c9a3f7549 DependenciesID=4c057f7969bc5c6591a09e5555b27852 StaticDependenciesID=62b7949329acb2e15aa5f5c9fa116197 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Resting Expression Capture.asset
-  importAddress: Guid(5be099e6e6012c244bb41881b6c0ea07) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/Hand Expression Captures/Resting Expression Capture.asset using Guid(5be099e6e6012c244bb41881b6c0ea07) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ee569e66fec7c414c58eb7af195e9a18') in 0.0044215 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6c883d50992d20a1793f1c79292f3903 DependenciesID=f28d73bfcb0f1b43491a138461bec8a4 StaticDependenciesID=e433e6127f2cb09fce59bcd4fc0767ec 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/Look.png
-  importAddress: Guid(5410adf0b914f49438506b7dd0022773) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/General/Look.png using Guid(5410adf0b914f49438506b7dd0022773) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '58fac9f5e1b6229bc2bdaf60eedefddf') in 0.0107785 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=41640620a2f8a89c2b5fa7db8cdb4bce DependenciesID=ac1b5a9eeba3ba667d48c7698e23a263 StaticDependenciesID=5599da37e81ade432d77d5cab90dad39 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/xr_ctlr.png
-  importAddress: Guid(7d7a2f6c5e996e24388af5a8227afdcf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/xr_ctlr.png using Guid(7d7a2f6c5e996e24388af5a8227afdcf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e3ba4e1a2f3fe96fa8ee64cd9ca3afe5') in 0.0089318 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=623ac5f86d56439b785286a6cc52320d DependenciesID=9554b4302675d877649639e702c237d7 StaticDependenciesID=fe6cb6f96bea579ee37d0178eca9c0a8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/hand.png
-  importAddress: Guid(290d158031622c645aa55f8bd981be12) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/hand.png using Guid(290d158031622c645aa55f8bd981be12) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '02f4e255c80a59b5eef82adecd412972') in 0.0103647 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4d4f8308cefab4ed8a201c54a33f5371 DependenciesID=e340b63cb80904267fa318b179625752 StaticDependenciesID=284cecfcc73961492449ac612651a767 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/ControllerRight.png
-  importAddress: Guid(17c263f6077f14b218b13656aacd9551) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Controller/ControllerRight.png using Guid(17c263f6077f14b218b13656aacd9551) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'be2641f8350059eee9156a4fec508802') in 0.0101484 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d13c1896ddddf78fdb0064747aaebce8 DependenciesID=bf2b088d4f8e2d4b35b0a3922aa9c48f StaticDependenciesID=b04ccc81728d0c52613f36d626dc7c9e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head
-  importAddress: Guid(01820cd5d6cab46b9afde2261f687a48) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Head using Guid(01820cd5d6cab46b9afde2261f687a48) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '03b9bcf470095d86a6d2a96380ea6f51') in 0.0036537 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=24308dbaa4a9b66e73a06987a1f111ca DependenciesID=9189dc66d9f11433690f0cb9468a4195 StaticDependenciesID=b8aeb5a0beb420e21d14a9f7da7a4037 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Poke.png
-  importAddress: Guid(a2586e6b399337f409118c79273dc29d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Samples/XR Interaction Toolkit/3.4.1/XR Device Simulator/UI/Hands/Hand_Poke.png using Guid(a2586e6b399337f409118c79273dc29d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'afd2ce944882efb838ee9cbe317d4f89') in 0.0082827 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a44e0adeec7d52f5aeaa4d84c5a3b8c8 DependenciesID=bb24a53ae78b394e32e9801c925eb666 StaticDependenciesID=03801a42cd11ff89cc33d206e2c778df 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-ADTM: Control thread waiting for realtime thread timed out, have to lock...
 Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
@@ -734,9 +505,7 @@ Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies
 Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll not valid. Loading of assembly skipped.
-Refreshing native plugins compatible for Editor in 6.12 ms, found 13 plugins.
-Assertion failed on expression: 'pred(*previous, *i)'
-Assertion failed on expression: 'pred(*previous, *i)'
+Refreshing native plugins compatible for Editor in 5.87 ms, found 13 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -749,164 +518,27 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.649 seconds
-Domain Reload Profiling: 4609ms
-	BeginReloadAssembly (1628ms)
-		DisableScriptedObjects (35ms)
-		CreateAndSetChildDomain (1268ms)
-	RebuildCommonClasses (40ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (101ms)
-	LoadAllAssembliesAndSetupDomain (1180ms)
-		LoadAssemblies (925ms)
-		AnalyzeDomain (447ms)
-			TypeCache.Refresh (61ms)
-				TypeCache.ScanAssembly (4ms)
-			BuildScriptInfoCaches (343ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1649ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (170ms)
-			ProcessInitializeOnLoadAttributes (976ms)
-			ProcessInitializeOnLoadMethodAttributes (220ms)
-			AfterProcessingInitializeOnLoad (5ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 4.86 ms, found 13 plugins.
-Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7484 unused Assets / (7.6 MB). Loaded Objects now: 8366.
-Memory consumption went from 215.9 MB to 208.3 MB.
-Total: 23.084600 ms (FindLiveObjects: 1.915600 ms CreateObjectMapping: 0.631200 ms MarkObjects: 16.361600 ms  DeleteObjects: 4.174500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-ADTM: Control thread waiting for realtime thread timed out, have to lock...
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Tutorials.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Tutorials.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Tutorials.Core.Tests.dll at Library/ScriptAssemblies/Unity.Tutorials.Core.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.AndroidOpenXR.Tests.dll at Library/ScriptAssemblies/Unity.XR.AndroidOpenXR.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.AndroidXROpenXR.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.AndroidXROpenXR.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.AndroidXROpenXR.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.AndroidXROpenXR.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.ARFoundation.CodeSamples.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.CodeSamples.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.ARFoundation.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.ARFoundation.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.ARFoundation.InternalUtils.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.InternalUtils.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.ARFoundation.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARFoundation.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.ARSubsystems.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.CompositionLayers.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.CompositionLayers.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.CompositionLayers.Tests.dll at Library/ScriptAssemblies/Unity.XR.CompositionLayers.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.CoreUtils.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.CoreUtils.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.CoreUtils.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.CoreUtils.Tests.dll at Library/ScriptAssemblies/Unity.XR.CoreUtils.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Hands.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.Hands.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Hands.Tests.dll at Library/ScriptAssemblies/Unity.XR.Hands.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Interaction.Toolkit.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Interaction.Toolkit.Tests.dll at Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Management.EditorTests.dll at Library/ScriptAssemblies/Unity.XR.Management.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Management.TestPackage.dll at Library/ScriptAssemblies/Unity.XR.Management.TestPackage.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Management.TestPackage.Editor.dll at Library/ScriptAssemblies/Unity.XR.Management.TestPackage.Editor.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Management.Tests.dll at Library/ScriptAssemblies/Unity.XR.Management.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Management.Tests.Standalone.dll at Library/ScriptAssemblies/Unity.XR.Management.Tests.Standalone.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.MetaOpenXR.CodeSamples.Tests.dll at Library/ScriptAssemblies/Unity.XR.MetaOpenXR.CodeSamples.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.MetaOpenXR.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.MetaOpenXR.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.MetaOpenXR.Tests.dll at Library/ScriptAssemblies/Unity.XR.MetaOpenXR.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.OpenXR.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.OpenXR.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.OpenXR.Tests.dll at Library/ScriptAssemblies/Unity.XR.OpenXR.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.OpenXR.Ubuntu.Tests.dll at Library/ScriptAssemblies/Unity.XR.OpenXR.Ubuntu.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Simulation.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.Simulation.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.Simulation.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.XR.Simulation.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.TestSupport.dll at Library/ScriptAssemblies/Unity.XR.TestSupport.dll not valid. Loading of assembly skipped.
-Assembly Unity.XR.TestTooling.Editor.Tests.dll at Library/ScriptAssemblies/Unity.XR.TestTooling.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.XR.OpenXR.CodeSamples.Editor.Tests.dll not valid. Loading of assembly skipped.
-Refreshing native plugins compatible for Editor in 5.40 ms, found 13 plugins.
-Assertion failed on expression: 'pred(*previous, *i)'
-Assertion failed on expression: 'pred(*previous, *i)'
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.505 seconds
-Domain Reload Profiling: 3430ms
-	BeginReloadAssembly (1264ms)
+- Finished resetting the current domain, in  1.460 seconds
+Domain Reload Profiling: 4167ms
+	BeginReloadAssembly (516ms)
 		DisableScriptedObjects (6ms)
-		CreateAndSetChildDomain (1068ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (71ms)
-	LoadAllAssembliesAndSetupDomain (531ms)
-		LoadAssemblies (376ms)
-		AnalyzeDomain (259ms)
-			TypeCache.Refresh (9ms)
-			BuildScriptInfoCaches (234ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1506ms)
+		CreateAndSetChildDomain (96ms)
+	RebuildCommonClasses (119ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (2001ms)
+		LoadAssemblies (1933ms)
+		AnalyzeDomain (377ms)
+			TypeCache.Refresh (8ms)
+			BuildScriptInfoCaches (354ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1461ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (158ms)
-			ProcessInitializeOnLoadAttributes (948ms)
-			ProcessInitializeOnLoadMethodAttributes (168ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
+			BeforeProcessingInitializeOnLoad (166ms)
+			ProcessInitializeOnLoadAttributes (915ms)
+			ProcessInitializeOnLoadMethodAttributes (162ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -925,14 +557,10 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Refreshing native plugins compatible for Editor in 5.98 ms, found 13 plugins.
+Refreshing native plugins compatible for Editor in 4.81 ms, found 13 plugins.
 Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7483 unused Assets / (8.1 MB). Loaded Objects now: 8369.
-Memory consumption went from 219.2 MB to 211.1 MB.
-Total: 22.119700 ms (FindLiveObjects: 0.861300 ms CreateObjectMapping: 0.735700 ms MarkObjects: 15.277900 ms  DeleteObjects: 5.242600 ms)
+Unloading 7480 unused Assets / (7.3 MB). Loaded Objects now: 8296.
+Memory consumption went from 216.0 MB to 208.7 MB.
+Total: 15.833500 ms (FindLiveObjects: 0.544900 ms CreateObjectMapping: 0.528700 ms MarkObjects: 11.995600 ms  DeleteObjects: 2.763000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
