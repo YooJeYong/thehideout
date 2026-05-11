@@ -1,6 +1,10 @@
+using System.Collections;
+using Hidenet.Audio;
 using Hidenet.Core;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Hidenet.Audio
 {
@@ -45,21 +49,15 @@ namespace Hidenet.Audio
 
             ambientPool = new AudioSource[ambientPoolSize];
             for (int i = 0; i < ambientPoolSize; i++)
-            {
                 ambientPool[i] = CreateSource($"AmbientSource_{i}", ambientGroup, loop: true);
-            }
 
             sfxPool = new AudioSource[sfxPoolSize];
             for (int i = 0; i < sfxPoolSize; i++)
-            {
                 sfxPool[i] = CreateSource($"SFXSource_{i}", sfxGroup, loop: false);
-            }
 
             voicePool = new AudioSource[voicePoolSize];
             for (int i = 0; i < voicePoolSize; i++)
-            {
                 voicePool[i] = CreateSource($"VoiceSource_{i}", voiceGroup, loop: false);
-            }
         }
 
         private AudioSource CreateSource(string name, AudioMixerGroup group, bool loop)
@@ -88,26 +86,14 @@ namespace Hidenet.Audio
             bgmSource.Play();
         }
 
-        public void PlayBGM(string resourcePath)
+        public void PlayBGM(string address)
         {
-            var data = LoadFromResources(resourcePath);
-            if (data != null) PlayBGM(data);
+            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlayBGM(data)));
         }
 
-        public void StopBGM()
-        {
-            bgmSource.Stop();
-        }
-
-        public void PauseBGM()
-        {
-            bgmSource.Pause();
-        }
-
-        public void ResumeBGM()
-        {
-            bgmSource.UnPause();
-        }
+        public void StopBGM() => bgmSource.Stop();
+        public void PauseBGM() => bgmSource.Pause();
+        public void ResumeBGM() => bgmSource.UnPause();
 
         // ----------------------------------------------------------------------
         // Ambient
@@ -129,18 +115,15 @@ namespace Hidenet.Audio
             return src;
         }
 
-        public AudioSource PlayAmbient(string resourcePath)
+        public void PlayAmbient(string address)
         {
-            var data = LoadFromResources(resourcePath);
-            return data != null ? PlayAmbient(data) : null;
+            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlayAmbient(data)));
         }
 
         public void StopAllAmbient()
         {
             foreach (var src in ambientPool)
-            {
                 if (src.isPlaying) src.Stop();
-            }
         }
 
         // ----------------------------------------------------------------------
@@ -160,16 +143,14 @@ namespace Hidenet.Audio
             src.Play();
         }
 
-        public void PlaySFX(string resourcePath)
+        public void PlaySFX(string address)
         {
-            var data = LoadFromResources(resourcePath);
-            if (data != null) PlaySFX(data);
+            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlaySFX(data)));
         }
 
         public void PlaySFXAtPoint(SoundDataSO data, Vector3 position)
         {
             if (data == null || data.clip == null) return;
-
             AudioSource.PlayClipAtPoint(data.clip, position, data.GetVolume());
         }
 
@@ -190,18 +171,15 @@ namespace Hidenet.Audio
             src.Play();
         }
 
-        public void PlayVoice(string resourcePath)
+        public void PlayVoice(string address)
         {
-            var data = LoadFromResources(resourcePath);
-            if (data != null) PlayVoice(data);
+            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlayVoice(data)));
         }
 
         public void StopAllVoice()
         {
             foreach (var src in voicePool)
-            {
                 if (src.isPlaying) src.Stop();
-            }
         }
 
         // ----------------------------------------------------------------------
@@ -217,23 +195,27 @@ namespace Hidenet.Audio
         private void SetMixerVolume(string parameter, float linear)
         {
             if (mixer == null || string.IsNullOrEmpty(parameter)) return;
-
             float dB = linear <= 0.0001f ? -80f : Mathf.Log10(Mathf.Clamp01(linear)) * 20f;
             mixer.SetFloat(parameter, dB);
         }
 
         // ----------------------------------------------------------------------
-        // Resources Loading
+        // Addressables Loading
         // ----------------------------------------------------------------------
 
-        private static SoundDataSO LoadFromResources(string resourcePath)
+        private IEnumerator LoadAndPlay<T>(string address, System.Action<T> onLoaded) where T : Object
         {
-            var data = Resources.Load<SoundDataSO>($"Sounds/{resourcePath}");
-            if (data == null)
+            var handle = Addressables.LoadAssetAsync<T>(address);
+            yield return handle;
+
+            if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                Debug.LogWarning($"[SoundManager] SoundDataSO not found: Resources/Sounds/{resourcePath}");
+                onLoaded(handle.Result);
             }
-            return data;
+            else
+            {
+                Debug.LogWarning($"[SoundManager] Failed to load: {address}");
+            }
         }
     }
 }

@@ -44,11 +44,8 @@ namespace Hidenet.Audio
             }
             else if (!string.IsNullOrEmpty(resourcePath))
             {
-                var src = SoundManager.Instance.PlayAmbient(resourcePath);
-                if (src != null)
-                {
-                    Debug.Log($"[_AmbientAutoPlayer] Played from Resources: {resourcePath}");
-                }
+                SoundManager.Instance.PlayAmbient(resourcePath);
+                Debug.Log($"[_AmbientAutoPlayer] Played from Addressables: {resourcePath}");
             }
             else
             {
