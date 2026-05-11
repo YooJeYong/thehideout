@@ -3486,6 +3486,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
   m_PrefabInstance: {fileID: 1257715672}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &301372823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301372824}
+  - component: {fileID: 301372825}
+  m_Layer: 0
+  m_Name: StoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &301372824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301372823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1701091813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301372825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301372823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421d93e2950ba7c46b9cc68962bb9cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hidenet.Core.StoryManager
+  currentStep: 0
 --- !u!1 &329674977
 GameObject:
   m_ObjectHideFlags: 0
@@ -12048,6 +12093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Jane
       objectReference: {fileID: 0}
+    - target: {fileID: 5891290739454175030, guid: 7ac51fc3d0c48485c9db51a4fadca336, type: 3}
+      propertyPath: greetingVoice
+      value: 
+      objectReference: {fileID: 11400000, guid: cf632638d59796a45aa597f847c199f0, type: 2}
     - target: {fileID: 6365137568024543966, guid: 7ac51fc3d0c48485c9db51a4fadca336, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -16632,6 +16681,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8806329115733545877, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8806329115733545878, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.01581
@@ -18862,6 +18915,7 @@ Transform:
   m_Children:
   - {fileID: 966427768}
   - {fileID: 610590593}
+  - {fileID: 301372824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702963519

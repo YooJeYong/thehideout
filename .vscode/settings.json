@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "thehideout.slnx",
+    "dotnet.defaultSolution": "hidenet.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
