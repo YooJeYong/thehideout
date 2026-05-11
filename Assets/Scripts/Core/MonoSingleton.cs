@@ -21,7 +21,7 @@ namespace Hidenet.Core
                     return instance;
                 }
 
-                instance = FindFirstObjectByType<T>();
+                instance = FindAnyObjectByType<T>();
                 if (instance != null)
                 {
                     return instance;
