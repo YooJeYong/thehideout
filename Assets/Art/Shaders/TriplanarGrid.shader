@@ -37,8 +37,11 @@ Shader "Custom/TriplanarGrid"
             #pragma fragment frag
 
             #pragma multi_compile_fog
+            #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _LineColor;
@@ -102,6 +105,23 @@ Shader "Custom/TriplanarGrid"
                 float lineInfluence = gridStrength * _LineColor.a;
 
                 half3 rgb = lerp(_BackgroundColor.rgb, _LineColor.rgb, lineInfluence);
+
+                // Directional Light
+                Light mainLight = GetMainLight();
+                float3 normal = normalize(IN.normalWS);
+                float NdotL = saturate(dot(normal, mainLight.direction));
+                float3 lighting = mainLight.color * NdotL * mainLight.shadowAttenuation;
+
+                // Additional Lights (Point, Spot 등)
+                int addLightCount = GetAdditionalLightsCount();
+                for (int i = 0; i < addLightCount; i++)
+                {
+                    Light addLight = GetAdditionalLight(i, IN.positionWS);
+                    float addNdotL = saturate(dot(normal, addLight.direction));
+                    lighting += addLight.color * addNdotL * addLight.distanceAttenuation;
+                }
+
+                rgb *= lighting;
 
                 rgb = MixFog(rgb, IN.fogCoord);
 

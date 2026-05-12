@@ -1,10 +1,8 @@
-using System.Collections;
 using Hidenet.Audio;
 using Hidenet.Core;
+using Hidenet.Managers;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Hidenet.Audio
 {
@@ -88,7 +86,7 @@ namespace Hidenet.Audio
 
         public void PlayBGM(string address)
         {
-            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlayBGM(data)));
+            ResourceManager.Instance.LoadAsync<SoundDataSO>(address, PlayBGM);
         }
 
         public void StopBGM() => bgmSource.Stop();
@@ -117,7 +115,7 @@ namespace Hidenet.Audio
 
         public void PlayAmbient(string address)
         {
-            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlayAmbient(data)));
+            ResourceManager.Instance.LoadAsync<SoundDataSO>(address, data => PlayAmbient(data));
         }
 
         public void StopAllAmbient()
@@ -145,7 +143,7 @@ namespace Hidenet.Audio
 
         public void PlaySFX(string address)
         {
-            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlaySFX(data)));
+            ResourceManager.Instance.LoadAsync<SoundDataSO>(address, PlaySFX);
         }
 
         public void PlaySFXAtPoint(SoundDataSO data, Vector3 position)
@@ -173,7 +171,7 @@ namespace Hidenet.Audio
 
         public void PlayVoice(string address)
         {
-            StartCoroutine(LoadAndPlay<SoundDataSO>(address, data => PlayVoice(data)));
+            ResourceManager.Instance.LoadAsync<SoundDataSO>(address, PlayVoice);
         }
 
         public void StopAllVoice()
@@ -199,23 +197,5 @@ namespace Hidenet.Audio
             mixer.SetFloat(parameter, dB);
         }
 
-        // ----------------------------------------------------------------------
-        // Addressables Loading
-        // ----------------------------------------------------------------------
-
-        private IEnumerator LoadAndPlay<T>(string address, System.Action<T> onLoaded) where T : Object
-        {
-            var handle = Addressables.LoadAssetAsync<T>(address);
-            yield return handle;
-
-            if (handle.Status == AsyncOperationStatus.Succeeded)
-            {
-                onLoaded(handle.Result);
-            }
-            else
-            {
-                Debug.LogWarning($"[SoundManager] Failed to load: {address}");
-            }
-        }
     }
 }
