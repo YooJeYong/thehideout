@@ -6,6 +6,7 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Aa]ssetViewerStats/
+/[Uu]serSettings/
 
 # Unity 가 생성하는 프로젝트 파일들
 *.csproj

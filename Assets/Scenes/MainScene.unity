@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hidenet.Managers.GameManager
   mainMenuUI: {fileID: 2046629158}
+  playerMove: {fileID: 1773845824}
 --- !u!1 &109820426
 GameObject:
   m_ObjectHideFlags: 0
@@ -9421,6 +9422,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1773845824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7867393351944209716, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788073335
 GameObject:
   m_ObjectHideFlags: 0
